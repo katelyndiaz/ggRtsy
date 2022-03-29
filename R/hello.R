@@ -41,4 +41,21 @@ RectangleFiller <- function(plot1,
     scale_fill_manual(values = hex_codes, guide = FALSE)
 }
 
+# alternative approach with helper function
+rgb2Hex <- function(x) {
+  parts <- as.integer(x)
+  if (x[1] < 0) {
+    divs <- c(1, -60, -3600)
+  } else {
+    divs <- c(1, 60, 3600)
+  }
+  sum(parts / divs)
+}
+convertToDecimal3 <- function(x) {
+  list_of_parts <- stringr::str_split(x, "\\.")
+  purrr::map_dbl(list_of_parts, convert1_to_dec)
+}
+
+#Turns 31.22.341 string into 31.235312 number or something like that
+
 
