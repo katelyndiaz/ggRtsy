@@ -1,6 +1,6 @@
-Package: Div2
+Package: ggFancyR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Add Some Van Gogh Colors and Overlay Colors On Your `ggplot()`
 Version: 0.1.0
 Authors@R: c(
   person("Katelyn", "Diaz", email = "katndiaz@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6108-1682")),
