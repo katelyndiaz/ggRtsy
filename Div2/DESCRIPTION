@@ -3,11 +3,11 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
 Authors@R: c(
-  person("Katelyn", "Diaz", email = "888knd@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6108-1682")),
+  person("Katelyn", "Diaz", email = "katndiaz@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6108-1682")),
   person("Silas", "Weden", email = "sweden@smith.edu", role = "aut"),
   person("Tess", "Goldmann", email = "tgoldmann@smith.edu", role = "aut")
     )
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: Katelyn Diaz <katndiaz@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
