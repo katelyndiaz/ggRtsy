@@ -51,9 +51,10 @@ rgb2Hex <- function(x) {
   }
   sum(parts / divs)
 }
+
 convertToDecimal3 <- function(x) {
   list_of_parts <- stringr::str_split(x, "\\.")
-  purrr::map_dbl(list_of_parts, convert1_to_dec)
+  purrr::map_dbl(list_of_parts, rgb2Hex)
 }
 
 #Turns 31.22.341 string into 31.235312 number or something like that
