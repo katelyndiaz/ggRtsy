@@ -10,4 +10,6 @@
 #'   \item{rgb}{Color RGB value}
 #'   \item{hex}{Color hex code value}
 #' }
+#' @source Kaggle Konstantinos Katserelis <https://www.kaggle.com/datasets/pointblanc/colors-of-van-gogh?select=color_space.csv>
+#' Note data is released under CC BY-SA 4.0
 "goghColors"
