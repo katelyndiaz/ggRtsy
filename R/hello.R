@@ -13,11 +13,6 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
-
-
 RectangleFiller <- function(plot1,
                              hex_codes = c("red", "blue", "green", "orange", "purple")) {
 
@@ -40,23 +35,4 @@ RectangleFiller <- function(plot1,
     geom_tile(data = coords, aes(height = rect_height, fill = fill), alpha = .2) +
     scale_fill_manual(values = hex_codes, guide = FALSE)
 }
-
-# alternative approach with helper function
-rgb2Hex <- function(x) {
-  parts <- as.integer(x)
-  if (x[1] < 0) {
-    divs <- c(1, -60, -3600)
-  } else {
-    divs <- c(1, 60, 3600)
-  }
-  sum(parts / divs)
-}
-
-convertToDecimal3 <- function(x) {
-  list_of_parts <- stringr::str_split(x, "\\.")
-  purrr::map_dbl(list_of_parts, rgb2Hex)
-}
-
-#Turns 31.22.341 string into 31.235312 number or something like that
-
 
