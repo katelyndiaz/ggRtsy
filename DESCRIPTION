@@ -18,7 +18,8 @@ Depends:
 RoxygenNote: 7.1.2
 Imports:
   purrr,
-  stringr
+  stringr,
+  testthat
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
