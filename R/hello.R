@@ -1,4 +1,6 @@
+#'  Rectangle Function
 #' @export
+#'
 RectangleFiller <- function(plot1,
                              hex_codes = c("red", "blue", "green", "orange", "purple")) {
 
