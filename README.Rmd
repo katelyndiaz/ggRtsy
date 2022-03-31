@@ -26,11 +26,8 @@ List of things to include in README from R Packages book, for our reference:
 
 4. An overview that describes the main components of the package. For more complex packages, this will point to vignettes for more details.
 
+At this point in its development, the ggArtsyR package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings. It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into colored quadrants, improving the readability of graphs. 
 
-
-The goal of SDS270_Div2 is to create a minimally viable R package.
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
 ```{r cars}
 summary(cars)
