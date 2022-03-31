@@ -12,7 +12,7 @@
 #   Install Package:           'Cmd + Shift + B'
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
-
+#' @export
 RectangleFiller <- function(plot1,
                              hex_codes = c("red", "blue", "green", "orange", "purple")) {
 
