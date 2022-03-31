@@ -6,10 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-List of things to include in README from R Packages book, for our
-reference:
-
-1.  A paragraph that describes the high-level purpose of the package.
+### List of things to include in README from R Packages book, for our reference:
 
 2.  An example that shows how to use the package to solve a simple
     problem.
@@ -17,9 +14,7 @@ reference:
 3.  Installation instructions, giving code that can be copied and pasted
     into R.
 
-4.  An overview that describes the main components of the package. For
-    more complex packages, this will point to vignettes for more
-    details.
+### Overview
 
 At this point in its development, the ggArtsyR package works with
 `ggplot2()` to add an additional color palette to the user’s repertoire.
@@ -30,10 +25,20 @@ add contextual information to the user’s plots. This main function is
 `RectangleFiller()`, which divides data visualizations into colored
 quadrants, improving the readability of graphs.
 
-### Example of `RectangleFiller()` using colors from goghColors dataset
+### Usage example
 
 ``` r
 # someone write code here if we can figure out how to do rectanglefiller with goghColors thatd be cool
+```
+
+### Installation instructions
+
+Get the development version from GitHub:
+
+``` r
+# Install remotes if needed:
+# install.packages("remotes")
+# remotes::install_github("katelyndiaz/SDS270_Div2")
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`
