@@ -1,4 +1,4 @@
-# library(tidyverse)
+library(tidyverse)
 # library(testthat)
 plotOne <- ggplot(starwars, aes(x = mass, y = height)) +
   geom_point() +

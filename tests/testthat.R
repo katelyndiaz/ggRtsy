@@ -1,4 +1,8 @@
 library(testthat)
-library(ggFancyR)
+# library(ggFancyR)
+#
+# test_check("ggFancyR")
 
-test_check("ggFancyR")
+library(SDS270_Div2)
+
+test_check("SDS270_Div2")
