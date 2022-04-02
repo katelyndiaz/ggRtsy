@@ -35,7 +35,7 @@ plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
 
 ! Write description of example here
 
-```{r}
+```{r, warning=FALSE}
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
