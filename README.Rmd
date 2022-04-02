@@ -26,6 +26,8 @@ At this point in its development, the ggArtsyR package works with `ggplot2()` to
 # Hidden chunk because it is setup for example
 library(dplyr)
 library(ggplot2)
+library(ggArtsyR)
+library(purrr)
 plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
   geom_point() +
   scale_x_continuous()
@@ -34,8 +36,7 @@ plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
 ! Write description of example here
 
 ```{r}
-# Commented out because of error halting knit
-# RectangleFiller(plotExample,)
+RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
 ### Installation instructions

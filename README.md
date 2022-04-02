@@ -22,9 +22,13 @@ quadrants, improving the readability of graphs.
 ! Write description of example here
 
 ``` r
-# Commented out because of error halting knit
-# RectangleFiller(plotExample,)
+RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
+#> Warning: Removed 28 rows containing missing values (geom_point).
+#> Warning: It is deprecated to specify `guide = FALSE` to remove a guide. Please
+#> use `guide = "none"` instead.
 ```
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ### Installation instructions
 
