@@ -10,7 +10,7 @@ RectangleFiller(
 )
 }
 \arguments{
-\item{plot1}{a ggplot}
+\item{plot1}{a ggplot with a continuous x-axis}
 
 \item{hex_codes}{series of wanted colors}
 }
