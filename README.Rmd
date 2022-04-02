@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 ### Overview
 
-At this point in its development, the `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings. It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into colored quadrants, improving the readability of graphs. 
+At this point in its development, the `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings. It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into a specified number of colored quadrants based on the number of input colors, improving the readability of graphs. 
 
 ### Usage example
 
@@ -43,7 +43,7 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 
 Get the development version from GitHub:
 
-```{r, message=FALSE}
+```{r, message=FALSE, eval=FALSE}
 #Install remotes if needed:
 #install.packages("remotes")
 remotes::install_github("katelyndiaz/SDS270_Div2")

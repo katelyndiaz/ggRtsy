@@ -14,8 +14,9 @@ This is the goghColors dataset, which contains the RGB codes of colors
 picked from Van Gogh paintings. It also has a function that work
 alongside `ggplot2()` to create more interesting data visualizations and
 add contextual information to the user’s plots. This main function is
-`RectangleFiller()`, which divides data visualizations into colored
-quadrants, improving the readability of graphs.
+`RectangleFiller()`, which divides data visualizations into a specified
+number of colored quadrants based on the number of input colors,
+improving the readability of graphs.
 
 ### Usage example
 
@@ -38,13 +39,4 @@ Get the development version from GitHub:
 #Install remotes if needed:
 #install.packages("remotes")
 remotes::install_github("katelyndiaz/SDS270_Div2")
-#> 
-#>      checking for file ‘/private/var/folders/x8/rk00wr614wq98fpzr4fqn7n80000gn/T/Rtmp75CZlH/remotes20792e370edf/katelyndiaz-SDS270_Div2-ceb7f66/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/x8/rk00wr614wq98fpzr4fqn7n80000gn/T/Rtmp75CZlH/remotes20792e370edf/katelyndiaz-SDS270_Div2-ceb7f66/DESCRIPTION’
-#>   ─  preparing ‘ggArtsyR’:
-#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘ggArtsyR_0.1.0.tar.gz’
-#>      
-#> 
 ```
