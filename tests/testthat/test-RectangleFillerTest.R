@@ -7,6 +7,7 @@ plotOne <- ggplot(starwars, aes(x = mass, y = height)) +
   scale_x_continuous()
 
 test_that("Rectange Filler works", {
-  expect_equal(RectangleFiller(plotOne, c("red", "blue", "green", "orange", "purple")))
+  x <- RectangleFiller(plotOne, c("red", "blue", "green", "orange", "purple"))
+  expect_s3_class(x, "ggplot")
 })
 #str.object
