@@ -2,13 +2,22 @@
 % Please edit documentation in R/hello.R
 \name{RectangleFiller}
 \alias{RectangleFiller}
-\title{Rectangle Function}
+\title{Adds transparent coloring horizontally across a ggplot}
 \usage{
 RectangleFiller(
   plot1,
   hex_codes = c("red", "blue", "green", "orange", "purple")
 )
 }
+\arguments{
+\item{plot1}{a ggplot}
+
+\item{hex_codes}{series of wanted colors}
+}
+\value{
+ggplot item with colors
+}
 \description{
-Rectangle Function
+Adds up to 5 colors of choice horizontally across a ggplot
+graph for data emphisis or decoration.
 }

@@ -1,4 +1,13 @@
-#'  Rectangle Function
+#' Adds transparent coloring horizontally across a ggplot
+#'
+#' Adds up to 5 colors of choice horizontally across a ggplot
+#' graph for data emphisis or decoration.
+#'
+#' @param plot1 a ggplot
+#' @param hex_codes series of wanted colors
+#'
+#' @return ggplot item with colors
+#'
 #' @export
 #'
 RectangleFiller <- function(plot1,
