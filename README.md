@@ -8,7 +8,7 @@
 
 ### Overview
 
-At this point in its development, the ggArtsyR package works with
+At this point in its development, the `ggArtsyR()` package works with
 `ggplot2()` to add an additional color palette to the user’s repertoire.
 This is the goghColors dataset, which contains the RGB codes of colors
 picked from Van Gogh paintings. It also has a function that work
@@ -19,7 +19,10 @@ quadrants, improving the readability of graphs.
 
 ### Usage example
 
-! Write description of example here
+Using Hex Codes from the dataset `goghColors`, three colors were added
+on top of a `ggplot` sample scatter plot. Based on the plot, the
+function automatically calculated three equal widths of the rectangles,
+and stretched them to upper and lower bounds on the y-axis.
 
 ``` r
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
