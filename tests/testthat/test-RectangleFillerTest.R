@@ -1,7 +1,9 @@
 # library(tidyverse)
 # library(testthat)
-#library(dplyr)
+library(dplyr)
 library(ggplot2)
+library(purrr)
+
 plotOne <- ggplot(starwars, aes(x = mass, y = height)) +
   geom_point() +
   scale_x_continuous()
