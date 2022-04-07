@@ -39,6 +39,14 @@ Using Hex Codes from the dataset `goghColors`, three colors were added on top of
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
+```{r, eval=FALSE}
+library(tayloRswift)
+plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point(size = 4) +
+  scale_color_taylor(palette = "starryNight")+
+  theme_minimal()
+```
+
 ### Installation instructions
 
 Get the development version from GitHub:
