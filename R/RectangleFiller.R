@@ -1,7 +1,7 @@
 #' Adds transparent coloring horizontally across a ggplot
 #'
 #' Adds up to 5 colors of choice horizontally across a ggplot
-#' graph for data emphisis or decoration.
+#' graph for data emphasis or decoration.
 #'
 #' @param plot1 a ggplot with a continuous x-axis
 #' @param hex_codes series of wanted colors
