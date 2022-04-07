@@ -21,3 +21,11 @@ goghColors <- readr::read_csv("data-raw/color_space.csv") %>%
 
 usethis::use_data(goghColors, overwrite = TRUE)
 
+## code to prepare `goghPaintingSets` dataset goes here
+
+goghPaintingSets <- readr::read_csv("data-raw/df.csv") %>%
+  janitor::clean_names() %>%
+  mutate(style = as.factor(style),
+         genre = as.factor(genre))
+usethis::use_data(goghPaintingSets, overwrite = TRUE)
+
