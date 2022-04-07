@@ -4,6 +4,6 @@ library(ggplot2)
 #
 # test_check("ggFancyR")
 
-library(ggArtsyR)
+library(ggRtsy)
 
-test_check("ggArtsyR")
+test_check("ggRtsy")
