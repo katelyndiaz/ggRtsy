@@ -1,1 +1,3 @@
-Y
+# Code to create palettes
+
+#GoghPalette
