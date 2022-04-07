@@ -29,3 +29,7 @@ goghPaintingSets <- readr::read_csv("data-raw/df.csv") %>%
          genre = as.factor(genre))
 usethis::use_data(goghPaintingSets, overwrite = TRUE)
 
+## code to delete repeated rows under the name
+
+#goghColors <- goghColors[!duplicated(goghColors$name), ]
+
