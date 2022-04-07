@@ -21,6 +21,9 @@ goghColors <- readr::read_csv("data-raw/color_space.csv") %>%
 
 usethis::use_data(goghColors, overwrite = TRUE)
 
+#name(goghColors) <- make.names(name(goghColors), unique=TRUE)
+
+
 ## code to prepare `goghPaintingSets` dataset goes here
 
 goghPaintingSets <- readr::read_csv("data-raw/df.csv") %>%
