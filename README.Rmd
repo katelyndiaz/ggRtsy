@@ -40,10 +40,10 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
 ```{r, eval=FALSE}
-library(tayloRswift)
+#library(tayloRswift)
 plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
   geom_point(size = 4) +
-  scale_color_taylor(palette = "starryNight")+
+  #scale_color_taylor(palette = "starryNight")+
   theme_minimal()
 ```
 
