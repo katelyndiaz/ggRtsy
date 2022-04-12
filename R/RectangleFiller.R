@@ -13,6 +13,7 @@
 RectangleFiller <- function(plot1,
                              hex_codes = c("red", "blue", "green", "orange", "purple")) {
 
+rect_height <- fill <- NULL
 
   data <- plot1$data[unlist(plot1$labels)] %>%
     purrr::map_dfr(range, na.rm = TRUE)
