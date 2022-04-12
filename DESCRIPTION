@@ -8,7 +8,7 @@ Authors@R: c(
   person("Tess", "Goldmann", email = "tgoldmann@smith.edu", role = "aut")
     )
 Maintainer: Katelyn Diaz <katndiaz@gmail.com>
-Description: ggArtsyR package works with `ggplot2()` to add an additional color palette to the user’s repertoire.
+Description: The `ggRtsy` package works with `ggplot2()` to add a Van Gogh color palette to the user’s repertoire.
  It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots.
 License: CC0
 Encoding: UTF-8
