@@ -1,11 +1,4 @@
 #' Different color palettes created from Van Gogh paintings
-#' graph for data emphasis or decoration.
-#'
-# @param plot1 a ggplot with a continuous x-axis
-# @param hex_codes series of wanted colors
-#'
-# @return ggplot item with colors
-
 #' @export
 #'
 
