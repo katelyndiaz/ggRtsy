@@ -14,8 +14,8 @@ RectangleFiller <- function(plot1,
                              hex_codes = c("red", "blue", "green", "orange", "purple")) {
 
 
-  data <- plot1$data[unlist(plot1$labels)] forcats::%>%
-    purr::map_dfr(range, na.rm = TRUE)
+  data <- plot1$data[unlist(plot1$labels)] %>%
+    purrr::map_dfr(range, na.rm = TRUE)
   x_min <- data[[1, 1]]
   x_max <- data[[2, 1]]
   width <- (x_max - x_min) / length(hex_codes)
