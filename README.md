@@ -56,3 +56,9 @@ And load it with
 ``` r
 library(ggRtsy)
 ```
+
+### Palettes
+
+![`starryNight`](https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg)
+`starryNight` = “\#23338C”, “\#30478C”, “\#5377A6”, “\#BDBF7E”,
+“\#BFA72C”
