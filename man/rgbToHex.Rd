@@ -4,7 +4,7 @@
 \alias{rgbToHex}
 \title{Converts RGB colors to Hex code colors}
 \usage{
-rgbToHex(rgbVec, ...)
+rgbToHex(rgbVec)
 }
 \arguments{
 \item{rgbVec}{a vector of strings in the format "(0, 72, 186)"}

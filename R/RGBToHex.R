@@ -11,7 +11,7 @@
 #'
 #' @importFrom magrittr %>%
 
-rgbToHex <- function(rgbVec, ...) {
+rgbToHex <- function(rgbVec) {
 
   hexdigit<-c(0:9,letters[1:6])
   rgbMapFunc <- function(rgb) {
