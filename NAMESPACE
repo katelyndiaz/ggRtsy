@@ -2,3 +2,5 @@
 
 export(RectangleFiller)
 export(gogh_palettes_pop)
+export(rgbToHex)
+importFrom(magrittr,"%>%")

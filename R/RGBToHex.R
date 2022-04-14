@@ -1,8 +1,5 @@
-#' @title RGBToHex
-#'
 #' Converts RGB colors to Hex code colors
-#'
-#' Taking input of a vector of RGB values in the format
+#' @details Taking input of a vector of RGB values in the format
 #' "(0, 72, 186)", etc, and returns the corresponding
 #' hex value in the format "#0048ba"
 #'
@@ -13,8 +10,6 @@
 #' @export
 #'
 #' @importFrom magrittr %>%
-NULL
-
 
 rgbToHex <- function(rgbVec, ...) {
 
