@@ -4,6 +4,8 @@
 # ggRtsy
 
 <!-- badges: start -->
+
+[![R](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml)
 <!-- badges: end -->
 
 ### Overview
