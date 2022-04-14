@@ -46,5 +46,11 @@ Get the development version from GitHub:
 ``` r
 #Install remotes if needed:
 #install.packages("remotes")
-remotes::install_github("katelyndiaz/SDS270_Div2")
+remotes::install_github("katelyndiaz/ggRtsy")
+```
+
+And load it with
+
+``` r
+library(ggRtsy)
 ```
