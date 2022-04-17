@@ -33,14 +33,6 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-``` r
-#library(tayloRswift)
-plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
-  geom_point(size = 4) +
-  #scale_color_taylor(palette = "starryNight")+
-  theme_minimal()
-```
-
 ### Installation instructions
 
 Get the development version from GitHub:
