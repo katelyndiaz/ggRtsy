@@ -14,6 +14,7 @@ gogh_palettes_pop <- list(
 )
 #' Interpolate the color palette
 #' @param palette the ggRtsy painting color palette of choice
+#' @param ... further arguments passed to [ggRtsy::gogh_interpolate()]
 #' @export
 gogh_interpolate <- function(palette = ggRtsy::starryNight, ...){
   pal <- gogh_palettes_pop[[palette]]
