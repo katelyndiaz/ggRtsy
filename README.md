@@ -54,5 +54,25 @@ library(ggRtsy)
 ### Palettes
 
 ![`starryNight`](https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg)
-`starryNight` = “\#23338C”, “\#30478C”, “\#5377A6”, “\#BDBF7E”,
-“\#BFA72C”
+
+`starryNight` = ‘#23338C’, ‘#30478C’, ‘#5377A6’, ‘#BDBF7E’, ‘#BFA72C’
+
+![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg)
+
+`sunflowers` = ‘#74A629’, ‘#F2EB80’, ‘#F2E085’, ‘#BF9821’, ‘#A6681C’
+
+![`selfPortrait`](https://uploads8.wikiart.org/images/vincent-van-gogh/self-portrait-1889-1.jpg!Large.jpg)
+
+`selfPortrait` = ‘#021F59’, ‘#63A5BF’, ‘#8C701C’, ‘#BF9B6F’, ‘#730202’
+
+![`wheatField`](https://uploads4.wikiart.org/images/vincent-van-gogh/wheat-field-with-cypresses-at-the-haude-galline-near-eygalieres-1889-2.jpg!Large.jpg)
+
+`wheatField` = ‘#73A9D9’, ‘#477332’, ‘#D9B13B’, ‘#D98E32’, ‘#A66329’
+
+![`cafeTerrace`](https://uploads2.wikiart.org/images/vincent-van-gogh/cafe-terrace-place-du-forum-arles-1888(1).jpg!Large.jpg)
+
+`cafeTerrace` = ‘#2A6BBF’, ‘#3F6CA6’, ‘#F2C84B’, ‘#D99036’, ‘#BF6734’
+
+### See also
+
+[tayloRswift package](https://github.com/asteves/tayloRswift)
