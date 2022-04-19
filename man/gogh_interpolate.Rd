@@ -4,10 +4,14 @@
 \alias{gogh_interpolate}
 \title{Interpolate the color palette}
 \usage{
-gogh_interpolate(palette = ggRtsy::starryNight, ...)
+gogh_interpolate(palette = ggRtsy::starryNight, reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{the ggRtsy painting color palette of choice}
+
+\item{reverse}{Boolean, will be TRUE if user wants the palette reversed}
+
+\item{...}{further arguments passed to [ggRtsy::gogh_interpolate()]}
 }
 \description{
 Interpolate the color palette
