@@ -53,7 +53,9 @@ library(ggRtsy)
 
 ### Palettes
 
-![`starryNight`](https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg)
+<figure>
+<img src="https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg" style="width:50.0%" alt="starryNight" /><figcaption aria-hidden="true"><code>starryNight</code></figcaption>
+</figure>
 
 `starryNight` = ‘#23338C’, ‘#30478C’, ‘#5377A6’, ‘#BDBF7E’, ‘#BFA72C’
 
