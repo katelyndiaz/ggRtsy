@@ -73,6 +73,18 @@ library(ggRtsy)
 
 `cafeTerrace` = ‘#2A6BBF’, ‘#3F6CA6’, ‘#F2C84B’, ‘#D99036’, ‘#BF6734’
 
+![`rhoneStarry`](https://uploads0.wikiart.org/00175/images/vincent-van-gogh/starry-night-over-the-rhone.jpg!Large.jpg)
+
+`rhoneStarry` = ‘#073359’, ‘#27668C’, ‘#5A98BF’, ‘#60734D’, ‘#A3A658’
+
+![`irises`](https://uploads0.wikiart.org/00213/images/vincent-van-gogh/antique-3840759.jpg!Large.jpg)
+
+`irises` = ‘#415AA6’, ‘#6382BF’, ‘#65A67C’, ‘#8CA653’, ‘#A66D58’
+
+![`almondBlossoms`](https://uploads6.wikiart.org/images/vincent-van-gogh/branches-with-almond-blossom-1890(1).jpg!Large.jpg)
+
+`almondBlossoms` = ‘#236E8C’, ‘#20788C’, ‘#49B3BF’, ‘#41BFBF’, ‘#BDBF75’
+
 ### See also
 
-[tayloRswift package](https://github.com/asteves/tayloRswift)
+-   [tayloRswift package](https://github.com/asteves/tayloRswift)
