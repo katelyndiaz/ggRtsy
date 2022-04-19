@@ -12,8 +12,10 @@ gogh_palettes_pop <- list(
   `irises` = c('#415AA6', '#6382BF', '#65A67C', '#8CA653', '#A66D58') , #https://uploads0.wikiart.org/00213/images/vincent-van-gogh/antique-3840759.jpg!Large.jpg
   `almondBlossoms` = c('#236E8C', '#20788C', '#49B3BF', '#41BFBF', '#BDBF75') #https://uploads6.wikiart.org/images/vincent-van-gogh/branches-with-almond-blossom-1890(1).jpg!Large.jpg
 )
-
-# gogh_interpolate <- function(palette = starryNight, ){
-#
-#
-# }
+#' Interpolate the color palette
+#' @param palette the ggRtsy painting color palette of choice
+#' @export
+gogh_interpolate <- function(palette = ggRtsy::starryNight, ...){
+  pal <- gogh_palettes_pop[[palette]]
+  grDevices::colorRampPalette(pal, ...)
+}

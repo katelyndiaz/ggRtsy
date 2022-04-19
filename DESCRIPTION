@@ -25,6 +25,7 @@ Imports:
   forcats,
   tibble,
   magrittr,
+  grDevices,
 Suggests: 
     knitr,
     testthat (>= 3.0.0)
