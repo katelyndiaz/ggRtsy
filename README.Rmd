@@ -70,3 +70,11 @@ library(ggRtsy)
 ![`starryNight`](https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg)
 `starryNight` = "#23338C", "#30478C", "#5377A6", "#BDBF7E", "#BFA72C"
 
+![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg)
+
+`sunflowers` = "#74A629", "#F2EB80", "#F2E085", "#BF9821", "#A6681C"
+
+
+### See also
+
+[tayloRswift package](https://github.com/asteves/tayloRswift)
