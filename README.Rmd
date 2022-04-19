@@ -49,6 +49,12 @@ plotExample2 <- ggplot(starwars, aes(x = height, y = mass)) +
   theme_minimal()
 ```
 
+This package also comes with rgbToHex, converting rgb colors into hex code colors.
+
+```{r}
+rgbToHex(c("(225, 104, 39)","(60, 90, 202)"))
+```
+
 ### Installation instructions
 
 Get the development version from GitHub:
