@@ -24,6 +24,8 @@ gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...
   }
   grDevices::colorRampPalette(pal, ...)
 }
+
+
 #' Creating the color scale for Van Gogh Colors
 #' @param palette the ggRtsy painting color palette of choice
 #' @param reverse Boolean, will be TRUE if user wants the palette reversed
@@ -48,7 +50,7 @@ scale_color_gogh <- function(palette = "starryNight",
   #   aesthetics = "colour",
   #   breaks = waiver(),
   #   na.value = "#6382BF"
-  )
+  #)
 }
 #' Creating the color fill scale for Van Gogh Colors
 #' @export

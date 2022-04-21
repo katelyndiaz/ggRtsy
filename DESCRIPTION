@@ -26,7 +26,6 @@ Imports:
   tibble,
   magrittr,
   grDevices,
-  hexSticker,
 Suggests: 
     knitr,
     testthat (>= 3.0.0)
