@@ -1,5 +1,5 @@
 ---
-title: "Vignette Title"
+title: "ggRtsy"
 author: "Katelyn Diaz, Tess Goldmann, Silas Weden"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -14,25 +14,62 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+library(dplyr)
+library(ggplot2)
+library(ggRtsy)
+library(purrr)
+plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point() +
+  scale_x_continuous()
 ```
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
+The `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings.
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+```{r}
+knitr::kable(head(goghColors,10))
+```
 
-## Vignette Info
+## RectangleFiller()
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+ggRtsy also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into a specified number of colored quadrants based on the number of input colors, improving the readability of graphs.
 
-## Styles
+Using Hex Codes from the dataset `goghColors`, three colors were added on top of a `ggplot` sample scatter plot. Based on the plot, the function automatically calculated three equal widths of the rectangles, and stretched them to upper and lower bounds on the y-axis. 
 
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+```{r, fig.show='hold'}
+RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
+```
 
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
+## rgbToHex()
+
+This package comes with rgbToHex, converting rgb colors into hex code colors.
+
+```{r}
+rgbToHex(c("(225, 104, 39)","(60, 90, 202)"))
+```
+
+## Gogh Painting Palettes
+
+The dataset goghPaintingSets contains a list of every Gogh painting, some information about them, and a set of colors randomly pulled from it. This can be used to make your own Gogh themed colorsets.
+
+```{r}
+knitr::kable(head(goghPaintingSets,4))
+```
+
+
+## gogh_palettes_pop
+
+For ease of use, gogh_palettes_pop is a list of color palettes from the most well known Gogh paintings.
+
+`sunflowers` = '#74A629', '#F2EB80', '#F2E085', '#BF9821', '#A6681C'
+![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg)
+
+The pallet can be used in graphs as so:
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
 
 ## Figures
 
