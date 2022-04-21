@@ -7,8 +7,8 @@
 #   geom_point() +
 #   scale_x_continuous()
 #
-# test_that("goghInterpolate works", {
-#  # x <- goghInterpolate(gogh_palettes_pop$starryNight)
-#   x <- goghInterpolate(gogh_palettes_pop[starryNight])
+# test_that("gogh_interpolate works", {
+#  # x <- gogh_interpolate(gogh_palettes_pop$starryNight)
+#   x <- gogh_interpolate(gogh_palettes_pop[starryNight])
 #   expect_s3_class(x, "character")
 # })
