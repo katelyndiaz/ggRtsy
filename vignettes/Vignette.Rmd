@@ -24,7 +24,9 @@ plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
   scale_x_continuous()
 ```
 
-The `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings.
+## goghColors
+
+The `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB and hex codes of colors picked from Van Gogh paintings.
 
 ```{r}
 knitr::kable(head(goghColors,10))
@@ -36,7 +38,7 @@ ggRtsy also has a function that work alongside `ggplot2()` to create more intere
 
 Using Hex Codes from the dataset `goghColors`, three colors were added on top of a `ggplot` sample scatter plot. Based on the plot, the function automatically calculated three equal widths of the rectangles, and stretched them to upper and lower bounds on the y-axis. 
 
-```{r, fig.show='hold'}
+```{r}
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
@@ -62,39 +64,25 @@ knitr::kable(head(goghPaintingSets,4))
 For ease of use, gogh_palettes_pop is a list of color palettes from the most well known Gogh paintings.
 
 `sunflowers` = '#74A629', '#F2EB80', '#F2E085', '#BF9821', '#A6681C'
-![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg)
+![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg){width=400px}
 
 The pallet can be used in graphs as so:
 
 ```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+plotExample2 <- ggplot(starwars, aes(x = height, y = mass)) +
+  geom_point(size = 4) +
+  scale_color_gogh() +
+  theme_minimal()
+plotExample2
 ```
 
 ## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
-```
 
 You can enable figure captions by `fig_caption: yes` in YAML:
 
     output:
       rmarkdown::html_vignette:
         fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
 
 Also a quote using `>`:
 
