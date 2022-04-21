@@ -38,10 +38,17 @@ scale_color_gogh <- function(palette = "starryNight",
   pal <- gogh_interpolate(palette = palette, reverse = reverse)
 
   if(discrete){
-    ggplot2::discrete_scale("colour", paste0("gogh_", palette), palette = pal, ...)
+    ggplot2::scale_discreet("color", paste0("gogh_", palette), palette = pal, ...)
   }else{
-    ggplot2::scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradient(colours = pal(256), ...)
   }
+  # ggplot2::scale_colour_manual(
+  #   ...,
+  #   values,
+  #   aesthetics = "colour",
+  #   breaks = waiver(),
+  #   na.value = "#6382BF"
+  )
 }
 #' Creating the color fill scale for Van Gogh Colors
 #' @export
