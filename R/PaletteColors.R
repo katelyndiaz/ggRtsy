@@ -17,7 +17,7 @@ gogh_palettes_pop <- list(
 #' @param reverse Boolean, will be TRUE if user wants the palette reversed
 #' @param ... further arguments passed to [ggRtsy::gogh_interpolate()]
 #' @export
-goghInterpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...){
+gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...){
   pal <- gogh_palettes_pop[[palette]]
   if(reverse){
     pal <- rev(pal)
