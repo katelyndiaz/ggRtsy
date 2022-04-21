@@ -25,9 +25,23 @@ gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...
   grDevices::colorRampPalette(pal, ...)
 }
 #' Creating the color scale for Van Gogh Colors
+#' @param palette the ggRtsy painting color palette of choice
+#' @param reverse Boolean, will be TRUE if user wants the palette reversed
+#' @param discrete Boolean if color aesthetic is discrete
+#' @param ... further arguments passed to [ggRtsy::scale_color_gogh()]
+#' library(ggplot2)
+#' data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+#' ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_taylor()
 #' @export
-scale_color_gogh <- function(){
+scale_color_gogh <- function(palette = "starryNight",
+                               discrete = TRUE, reverse=FALSE,...){
+  pal <- gogh_interpolate(palette = palette, reverse = reverse)
 
+  if(discrete){
+    ggplot2::discrete_scale("colour", paste0("gogh_", palette), palette = pal, ...)
+  }else{
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
+  }
 }
 #' Creating the color fill scale for Van Gogh Colors
 #' @export
