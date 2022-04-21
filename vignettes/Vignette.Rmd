@@ -69,9 +69,9 @@ For ease of use, gogh_palettes_pop is a list of color palettes from the most wel
 The pallet can be used in graphs as so:
 
 ```{r, fig.show='hold'}
-plotExample2 <- ggplot(starwars, aes(x = height, y = mass)) +
+plotExample2 <- ggplot(starwars, aes(x = height, y = mass, fill = sex)) +
   geom_point(size = 4) +
-  scale_color_gogh() +
+  scale_color_gogh(palette = "sunflowers") +
   theme_minimal()
 plotExample2
 ```
