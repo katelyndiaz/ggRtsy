@@ -40,7 +40,7 @@ scale_color_gogh <- function(palette = "starryNight",
   pal <- gogh_interpolate(palette = palette, reverse = reverse)
 
   if(discrete){
-    ggplot2::scale_discreet("color", paste0("gogh_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("color", paste0("gogh_", palette), palette = pal, ...)
   }else{
     ggplot2::scale_color_gradient(colours = pal(256), ...)
   }
