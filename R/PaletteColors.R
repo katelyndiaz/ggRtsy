@@ -17,9 +17,10 @@ gogh_palettes_pop <- list(
 #' @param reverse Boolean, will be TRUE if user wants the palette reversed
 #' @param ... further arguments passed to [ggRtsy::gogh_interpolate()]
 #' @export
-gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...){
+gogh_interpolate <- function(palette = "starryNight", reverse = FALSE, ...){
   pal <- gogh_palettes_pop[[palette]]
-  if(reverse){
+  #pal <- palette
+  if(reverse==TRUE){
     pal <- rev(pal)
   }
   grDevices::colorRampPalette(pal, ...)
@@ -37,10 +38,10 @@ gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...
 #' @export
 scale_color_gogh <- function(palette = "starryNight",
                                discrete = TRUE, reverse=FALSE,...){
-  pal <- gogh_interpolate(palette = palette, reverse = reverse)
+  pal <- gogh_interpolate(palette, reverse)
 
-  if(discrete){
-    ggplot2::discrete_scale("color", paste0("gogh_", palette), palette = pal, ...)
+  if(discrete==TRUE){
+    ggplot2::discrete_scale("color", palette, palette = pal, ...)
   }else{
     ggplot2::scale_color_gradient(colours = pal(256), ...)
   }
@@ -66,7 +67,7 @@ scale_color_gogh <- function(palette = "starryNight",
 scale_fill_gogh <- function(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...){
   pal <- gogh_interpolate(palette = palette, reverse = reverse,
                           if(discrete){
-                            ggplot2::discrete_scale("fill", paste0("gogh_", palette), palette = pal, ...)
+                            ggplot2::discrete_scale("fill", palette, palette = pal, ...)
                           }
                           else{
                             ggplot2::scale_fill_gradientn(colors = pal(256),...)
