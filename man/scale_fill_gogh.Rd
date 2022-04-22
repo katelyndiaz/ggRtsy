@@ -19,6 +19,7 @@ to automatically interpolate between colours.}
 \value{
 No return value. Called for side effects
 library(ggplot2)
+library(scales)
 data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
 ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
 }

@@ -35,6 +35,15 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
+``` r
+ggplot(starwars, aes(x = height, y = mass, color = height)) +
+  geom_point(size = 4) +
+  scale_color_gogh(palette = "sunflowers", discrete = FALSE, reverse=FALSE) +
+  theme_minimal()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
 This package also comes with rgbToHex, converting rgb colors into hex
 code colors.
 

@@ -26,32 +26,29 @@ gogh_interpolate <- function(palette = "starryNight", reverse = FALSE, ...){
   grDevices::colorRampPalette(pal, ...)
 }
 
-
 #' Creating the color scale for Van Gogh Colors
 #' @param palette the ggRtsy painting color palette of choice
 #' @param reverse Boolean, will be TRUE if user wants the palette reversed
 #' @param discrete Boolean if color aesthetic is discrete
 #' @param ... further arguments passed to [ggRtsy::scale_color_gogh()]
 #' library(ggplot2)
+#' library(scales)
 #' data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
 #' ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()
 #' @export
 scale_color_gogh <- function(palette = "starryNight",
-                               discrete = TRUE, reverse=FALSE,...){
+                             discrete = TRUE, reverse=FALSE,...) {
   pal <- gogh_interpolate(palette, reverse)
 
   if(discrete==TRUE){
-    ggplot2::discrete_scale("color", palette, palette = pal, ...)
-  }else{
-    ggplot2::scale_color_gradient(colours = pal(256), ...)
+    #ggplot2::discrete_scale("color", palette, palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("gogh_", palette), palette = pal, ...)
   }
-  # ggplot2::scale_colour_manual(
-  #   ...,
-  #   values,
-  #   aesthetics = "colour",
-  #   breaks = waiver(),
-  #   na.value = "#6382BF"
-  #)
+
+  else{
+    ggplot2::scale_colour_gradientn(colours=pal(256), ...) # gradient is the default for continuous
+  }
+
 }
 #' Creating the color fill scale for Van Gogh Colors
 #' @param palette Character name of palette in gogh_palettes_pop
@@ -61,16 +58,18 @@ scale_color_gogh <- function(palette = "starryNight",
 #'   to automatically interpolate between colours.
 #' @return No return value. Called for side effects
 #' library(ggplot2)
+#' library(scales)
 #' data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
 #' ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
 #' @export
 scale_fill_gogh <- function(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...){
-  pal <- gogh_interpolate(palette = palette, reverse = reverse,
+  pal <- gogh_interpolate(palette = palette, reverse = reverse)
                           if(discrete){
-                            ggplot2::discrete_scale("fill", palette, palette = pal, ...)
+                            #ggplot2::discrete_scale("fill", palette, palette = pal, ...)
+                            ggplot2::scale_color_brewer("fill", paste0("gogh_", palette), palette = pal, ...)
                           }
                           else{
-                            ggplot2::scale_fill_gradientn(colors = pal(256),...)
-                          })
+                            ggplot2::scale_fill_gradientn(colours = pal(256),...)
+                          }
 }
 
