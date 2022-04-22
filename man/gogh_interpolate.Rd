@@ -4,7 +4,7 @@
 \alias{gogh_interpolate}
 \title{Interpolate the color palette}
 \usage{
-gogh_interpolate(palette = ggRtsy::starryNight, reverse = FALSE, ...)
+gogh_interpolate(palette = "starryNight", reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{the ggRtsy painting color palette of choice}
