@@ -33,7 +33,7 @@ gogh_interpolate <- function(palette = ggRtsy::starryNight, reverse = FALSE, ...
 #' @param ... further arguments passed to [ggRtsy::scale_color_gogh()]
 #' library(ggplot2)
 #' data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
-#' ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_taylor()
+#' ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()
 #' @export
 scale_color_gogh <- function(palette = "starryNight",
                                discrete = TRUE, reverse=FALSE,...){
@@ -53,8 +53,23 @@ scale_color_gogh <- function(palette = "starryNight",
   #)
 }
 #' Creating the color fill scale for Van Gogh Colors
+#' @param palette Character name of palette in gogh_palettes_pop
+#' @param discrete Boolean if color aesthetic is discrete
+#' @param reverse Boolean if palette should be reversed
+#' @param ... Additional arguments used to discrete_scale() or scale_fill_gradientn()
+#'   to automatically interpolate between colours.
+#' @return No return value. Called for side effects
+#' library(ggplot2)
+#' data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+#' ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
 #' @export
-scale_fill_gogh <- function(){
-
+scale_fill_gogh <- function(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...){
+  pal <- gogh_interpolate(palette = palette, reverse = reverse,
+                          if(discrete){
+                            ggplot2::discrete_scale("fill", paste0("gogh_", palette), palette = pal, ...)
+                          }
+                          else{
+                            ggplot2::scale_fill_gradientn(colors = pal(256),...)
+                          })
 }
 

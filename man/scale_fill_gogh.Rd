@@ -4,7 +4,23 @@
 \alias{scale_fill_gogh}
 \title{Creating the color fill scale for Van Gogh Colors}
 \usage{
-scale_fill_gogh()
+scale_fill_gogh(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...)
+}
+\arguments{
+\item{palette}{Character name of palette in gogh_palettes_pop}
+
+\item{discrete}{Boolean if color aesthetic is discrete}
+
+\item{reverse}{Boolean if palette should be reversed}
+
+\item{...}{Additional arguments used to discrete_scale() or scale_fill_gradientn()
+to automatically interpolate between colours.}
+}
+\value{
+No return value. Called for side effects
+library(ggplot2)
+data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
 }
 \description{
 Creating the color fill scale for Van Gogh Colors
