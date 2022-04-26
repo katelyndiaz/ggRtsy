@@ -14,7 +14,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   message = FALSE,
-  warning = FALSE
+  warning = FALSE,
+  fig.width = 6
 )
 
 library(dplyr)
@@ -25,7 +26,7 @@ library(purrr)
 exampleData <- starwars %>%
  filter(mass < 1000)
 plotExample <-  ggplot(exampleData, aes(x = height, y = mass)) +
-  geom_point() +
+  geom_point(size = 3) +
   scale_x_continuous()
 ```
 
@@ -69,7 +70,7 @@ knitr::kable(head(goghPaintingSets,4))
 For ease of use, gogh_palettes_pop is a list of color palettes from the most well known Gogh paintings.
 
 `cafeTerrace` = '#2A6BBF', '#3F6CA6', '#F2C84B', '#D99036', '#BF6734'
-![](https://uploads2.wikiart.org/images/vincent-van-gogh/cafe-terrace-place-du-forum-arles-1888(1).jpg!Large.jpg){width=400px}
+![](https://uploads2.wikiart.org/images/vincent-van-gogh/cafe-terrace-place-du-forum-arles-1888(1).jpg!Large.jpg){width=200px}
 
 The palettes can be used in graphs as follows:
 
