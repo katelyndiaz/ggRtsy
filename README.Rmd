@@ -62,6 +62,13 @@ ggplot(storms, aes(x = hour, y = wind, color = status)) +
   theme_minimal()
 ```
 
+```{r, warning=FALSE, message=FALSE}
+ggplot(storms, aes(x = category, fill = status)) +
+  geom_bar() +
+  scale_fill_gogh(palette = "almondBlossoms", discrete = TRUE, reverse=FALSE) +
+  theme_minimal()
+```
+
 
 This package also comes with rgbToHex, converting rgb colors into hex code colors.
 
