@@ -13,9 +13,8 @@
 #' @importFrom magrittr %>%
 
 RectangleFiller <- function(plot1,
-                             hex_codes = c("red", "blue", "green", "orange", "purple")) {
-
-rect_height <- fill <- NULL
+                            hex_codes = c("red", "blue", "green", "orange", "purple")) {
+  rect_height <- fill <- NULL
 
   data <- plot1$data[unlist(plot1$labels)] %>%
     purrr::map_dfr(range, na.rm = TRUE)
@@ -35,4 +34,3 @@ rect_height <- fill <- NULL
     ggplot2::geom_tile(data = coords, ggplot2::aes(height = rect_height, fill = fill), alpha = .2) +
     ggplot2::scale_fill_manual(values = hex_codes, guide = FALSE)
 }
-
