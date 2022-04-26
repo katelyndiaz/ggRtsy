@@ -68,15 +68,37 @@ knitr::kable(head(goghPaintingSets,4))
 
 For ease of use, gogh_palettes_pop is a list of color palettes from the most well known Gogh paintings.
 
-`selfPortrait` = '#021F59', '#63A5BF', '#8C701C', '#BF9B6F', '#730202' 
-![](https://uploads8.wikiart.org/images/vincent-van-gogh/self-portrait-1889-1.jpg!Large.jpg){width=200px}
+`cafeTerrace` = '#2A6BBF', '#3F6CA6', '#F2C84B', '#D99036', '#BF6734'
+![](https://uploads2.wikiart.org/images/vincent-van-gogh/cafe-terrace-place-du-forum-arles-1888(1).jpg!Large.jpg){width=400px}
 
-The palette can be used in graphs as so:
+The palettes can be used in graphs as follows:
+
+
+
+scale_color_gogh continuous
 
 ```{r}
-plotExample2 <- ggplot(exampleData, aes(x = height, y = mass, color = sex)) +
+plotExample2 <- ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
   geom_point(size = 2) +
-  scale_color_gogh(palette = "selfPortrait") +
+  scale_color_gogh(palette = "cafeTerrace", discrete = FALSE) +
   theme_minimal()
 plotExample2
+```
+
+scale_color_gogh discrete
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(storms, aes(x = hour, y = wind, color = status)) +
+  geom_point(size = 3) +
+  scale_color_gogh(palette = "wheatField", discrete = TRUE, reverse=FALSE) +
+  theme_minimal()
+```
+
+scale_fill_gogh discrete
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(storms, aes(x = category, fill = status)) +
+  geom_bar() +
+  scale_fill_gogh(palette = "almondBlossoms", discrete = TRUE, reverse=FALSE) +
+  theme_minimal()
 ```

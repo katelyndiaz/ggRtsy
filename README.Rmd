@@ -44,23 +44,16 @@ Using Hex Codes from the dataset `goghColors`, three colors were added on top of
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
-Continuous example using the `sunflowers` color palette:
+Continuous scale_color_gogh example using the `cafeTerrace` color palette:
 
 ```{r, warning=FALSE, message=FALSE}
  ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
    geom_point(size = 2) +
-   scale_color_gogh(palette = "sunflowers", discrete = FALSE, reverse=FALSE) +
+   scale_color_gogh(palette = "cafeTerrace", discrete = FALSE, reverse=TRUE) +
    theme_minimal()
 ```
 
-Discrete example using the `almondBlossoms` color palette:
-
-```{r, warning=FALSE, message=FALSE}
-ggplot(storms, aes(x = hour, y = wind, color = status)) +
-  geom_point(size = 4) +
-  scale_color_gogh(palette = "almondBlossoms", discrete = TRUE, reverse=FALSE) +
-  theme_minimal()
-```
+Discrete scale_fill_gogh example using the `almondBlossoms` color palette:
 
 ```{r, warning=FALSE, message=FALSE}
 ggplot(storms, aes(x = category, fill = status)) +
