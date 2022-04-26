@@ -69,7 +69,7 @@ For ease of use, gogh_palettes_pop is a list of color palettes from the most wel
 `selfPortrait` = '#021F59', '#63A5BF', '#8C701C', '#BF9B6F', '#730202' 
 ![](https://uploads8.wikiart.org/images/vincent-van-gogh/self-portrait-1889-1.jpg!Large.jpg){width=200px}
 
-The pallet can be used in graphs as so:
+The palette can be used in graphs as so:
 
 ```{r}
 plotExample2 <- ggplot(exampleData, aes(x = height, y = mass, color = sex)) +
