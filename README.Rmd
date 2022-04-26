@@ -43,6 +43,7 @@ Using Hex Codes from the dataset `goghColors`, three colors were added on top of
 ```{r, warning=FALSE}
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
+
 Continuous example using the `sunflowers` color palette:
 
 ```{r, warning=FALSE, message=FALSE}
@@ -51,6 +52,7 @@ Continuous example using the `sunflowers` color palette:
    scale_color_gogh(palette = "sunflowers", discrete = FALSE, reverse=FALSE) +
    theme_minimal()
 ```
+
 Discrete example using the `almondBlossoms` color palette:
 
 ```{r, warning=FALSE, message=FALSE}
