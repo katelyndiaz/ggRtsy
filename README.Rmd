@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 ### Overview
 
-At this point in its development, the `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB codes of colors picked from Van Gogh paintings. It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into a specified number of colored quadrants based on the number of input colors, improving the readability of graphs. 
+The `ggArtsyR()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the goghColors dataset, which contains the RGB and hex codes of colors picked from Van Gogh paintings. It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots. This main function is `RectangleFiller()`, which divides data visualizations into a specified number of colored quadrants based on the number of input colors, improving the readability of graphs. 
 
 ### Usage example
 
@@ -32,7 +32,10 @@ library(dplyr)
 library(ggplot2)
 library(ggRtsy)
 library(purrr)
-plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
+
+exampleData <- starwars %>%
+ filter(mass < 1000)
+plotExample <-  ggplot(exampleData, aes(x = height, y = mass)) +
   geom_point() +
   scale_x_continuous()
 ```
@@ -45,10 +48,10 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 Continuous example using the `sunflowers` color palette:
 
 ```{r, warning=FALSE, message=FALSE}
-# ggplot(starwars, aes(x = height, y = mass, color = sex)) +
-#   geom_point(size = 4) +
-#   scale_color_gogh(palette = "sunflowers", discrete = FALSE, reverse=FALSE) +
-#   theme_minimal()
+ ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
+   geom_point(size = 2) +
+   scale_color_gogh(palette = "sunflowers", discrete = FALSE, reverse=FALSE) +
+   theme_minimal()
 ```
 Discrete example using the `almondBlossoms` color palette:
 

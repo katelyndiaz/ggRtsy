@@ -19,7 +19,10 @@ library(dplyr)
 library(ggplot2)
 library(ggRtsy)
 library(purrr)
-plotExample <- ggplot(starwars, aes(x = height, y = mass)) +
+
+exampleData <- starwars %>%
+ filter(mass < 1000)
+plotExample <-  ggplot(exampleData, aes(x = height, y = mass)) +
   geom_point() +
   scale_x_continuous()
 ```
@@ -39,7 +42,7 @@ ggRtsy also has a function that work alongside `ggplot2()` to create more intere
 Using Hex Codes from the dataset `goghColors`, three colors were added on top of a `ggplot` sample scatter plot. Based on the plot, the function automatically calculated three equal widths of the rectangles, and stretched them to upper and lower bounds on the y-axis. 
 
 ```{r}
-RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
+RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2", "#e16827"))
 ```
 
 ## rgbToHex()
@@ -50,7 +53,7 @@ This package comes with rgbToHex, converting rgb colors into hex code colors.
 rgbToHex(c("(225, 104, 39)","(60, 90, 202)"))
 ```
 
-## Gogh Painting Palettes
+## Gogh Painting Sets
 
 The dataset goghPaintingSets contains a list of every Gogh painting, some information about them, and a set of colors randomly pulled from it. This can be used to make your own Gogh themed colorsets.
 
@@ -63,28 +66,15 @@ knitr::kable(head(goghPaintingSets,4))
 
 For ease of use, gogh_palettes_pop is a list of color palettes from the most well known Gogh paintings.
 
-`sunflowers` = '#74A629', '#F2EB80', '#F2E085', '#BF9821', '#A6681C'
-![`sunflowers`](https://uploads7.wikiart.org/images/vincent-van-gogh/still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large.jpg){width=400px}
+`selfPortrait` = '#021F59', '#63A5BF', '#8C701C', '#BF9B6F', '#730202' 
+![](https://uploads8.wikiart.org/images/vincent-van-gogh/self-portrait-1889-1.jpg!Large.jpg){width=200px}
 
 The pallet can be used in graphs as so:
 
-```{r, fig.show='hold'}
-plotExample2 <- ggplot(starwars, aes(x = height, y = mass, fill = sex)) +
-  geom_point(size = 4) +
-  scale_color_gogh(palette = "sunflowers") +
+```{r}
+plotExample2 <- ggplot(exampleData, aes(x = height, y = mass, color = sex)) +
+  geom_point(size = 2) +
+  scale_color_gogh(palette = "selfPortrait") +
   theme_minimal()
 plotExample2
 ```
-
-## Figures
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
