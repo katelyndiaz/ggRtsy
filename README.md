@@ -15,12 +15,24 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 The `ggArtsyR()` package works with `ggplot2()` to add an additional
 color palette to the user’s repertoire. This is the `goghColors`
 dataset, which contains the RGB and hex codes of colors picked from Van
-Gogh paintings. It also has a function that work alongside `ggplot2()`
-to create more interesting data visualizations and add contextual
-information to the user’s plots. This main function is
-`RectangleFiller()`, which divides data visualizations into a specified
-number of colored quadrants based on the number of input colors,
-improving the readability of graphs.
+Gogh paintings. It has been broken down into an easy-to-use color
+palette based on Van Gogh’s most famous paintings, in the
+`gogh_palettes_pop` list.
+
+#### Functions within the package:
+
+It also has a function that work alongside `ggplot2()` to create more
+interesting data visualizations and add contextual information to the
+user’s plots.
+
+-   `RectangleFiller()` - divides data visualizations into a specified
+    number of colored quadrants based on the number of input colors,
+    improving the readability of graphs.
+
+-   `scale_color_gogh()` - used to color the point/lines of your ggplot
+
+-   `scale_fill_gogh()` - used to fill the inner color/bars of your
+    ggplot
 
 ### Usage example
 
@@ -57,7 +69,7 @@ ggplot(storms, aes(x = category, fill = status)) +
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-This package also comes with rgbToHex, converting rgb colors into hex
+This package also comes with `rgbToHex`, converting rgb colors into hex
 code colors.
 
 ``` r
