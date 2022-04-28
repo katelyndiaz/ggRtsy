@@ -33,6 +33,8 @@ It also has a function that work alongside `ggplot2()` to create more interestin
 
 - `scale_fill_gogh()` - used to fill the inner color/bars of your ggplot
 
+- `rgbToHeX()` - used to convert rgb color codes to hex color codes
+
 ### Usage example
 
 ```{r, include=FALSE}

@@ -35,6 +35,8 @@ user’s plots.
 -   `scale_fill_gogh()` - used to fill the inner color/bars of your
     ggplot
 
+-   `rgbToHeX()` - used to convert rgb color codes to hex color codes
+
 ### Usage example
 
 Using Hex Codes from the dataset `goghColors`, three colors were added
