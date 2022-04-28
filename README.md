@@ -13,12 +13,12 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 ### Overview
 
-The `ggArtsyR()` package works with `ggplot2()` to add an additional
-color palette to the user’s repertoire. This is the `goghColors`
-dataset, which contains the RGB and hex codes of colors picked from Van
-Gogh paintings. It has been broken down into an easy-to-use color
-palette based on Van Gogh’s most famous paintings, in the
-`gogh_palettes_pop` list.
+The `ggRtsy()` package works with `ggplot2()` to add an additional color
+palette to the user’s repertoire. This is the `goghColors` dataset,
+which contains the RGB and hex codes of colors picked from Van Gogh
+paintings. It has been broken down into an easy-to-use color palette
+based on Van Gogh’s most famous paintings, in the `gogh_palettes_pop`
+list.
 
 #### Functions within the package:
 
@@ -36,6 +36,9 @@ user’s plots.
     ggplot
 
 -   `rgbToHeX()` - used to convert rgb color codes to hex color codes
+
+-   `gogh_interpolate()` - interpolates between the colors in
+    `gogh_palettes_pop`
 
 ### Usage example
 
