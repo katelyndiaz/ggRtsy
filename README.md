@@ -140,14 +140,6 @@ library(ggRtsy)
 
 <img src="https://uploads6.wikiart.org/images/vincent-van-gogh/branches-with-almond-blossom-1890(1).jpg!Large.jpg" width="400" />
 
-### Authors
-
--   [Katelyn Diaz](https://github.com/katelyndiaz)
-
--   [Tess Goldmann](https://github.com/tessgold)
-
--   [Silas Weden](https://github.com/silasweden)
-
 ### See also
 
 -   [tayloRswift package](https://github.com/asteves/tayloRswift)
