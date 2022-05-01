@@ -143,7 +143,13 @@ library(ggRtsy)
 
 ![](https://uploads6.wikiart.org/images/vincent-van-gogh/branches-with-almond-blossom-1890(1).jpg!Large.jpg){width=400px}
 
+### Authors
 
+- [Katelyn Diaz](https://github.com/katelyndiaz)
+
+- [Tess Goldmann](https://github.com/tessgold)
+
+- [Silas Weden](https://github.com/silasweden)
 
 
 ### See also
