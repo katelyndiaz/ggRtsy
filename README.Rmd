@@ -77,7 +77,6 @@ ggplot(storms, aes(x = category, fill = status)) +
   theme_minimal()
 ```
 
-
 This package also comes with `rgbToHex`, converting rgb colors into hex code colors.
 
 ```{r}
