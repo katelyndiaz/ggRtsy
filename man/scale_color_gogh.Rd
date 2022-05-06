@@ -18,12 +18,14 @@ scale_color_gogh(
 
 \item{reverse}{Boolean, will be TRUE if user wants the palette reversed}
 
-\item{...}{further arguments passed to [ggRtsy::scale_color_gogh()]
-library(ggplot2)
-library(scales)
-data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
-ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()}
+\item{...}{further arguments passed to [ggRtsy::scale_color_gogh()]}
 }
 \description{
 Creating the color scale for Van Gogh Colors
+}
+\examples{
+if (require(ggplot2)) {
+  data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+  ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()
+}
 }

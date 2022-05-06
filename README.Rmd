@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 ### Overview
 
-The `ggRtsy()` package works with `ggplot2()` to add an additional color palette to the user’s repertoire. This is the `goghColors` dataset, which contains the RGB and hex codes of colors picked from Van Gogh paintings. It has been broken down into an easy-to-use color palette based on Van Gogh's most famous paintings, in the `gogh_palettes_pop` list. 
+The **ggRtsy** package works with **ggplot2** to add an additional color palette to the user’s repertoire. This is the `goghColors` dataset, which contains the RGB and hex codes of colors picked from Van Gogh paintings. It has been broken down into an easy-to-use color palette based on Van Gogh's most famous paintings, in the `gogh_palettes_pop` list. 
 
 #### Functions within the package:
 
@@ -47,40 +47,40 @@ library(ggRtsy)
 library(purrr)
 
 exampleData <- starwars %>%
- filter(mass < 1000)
-plotExample <-  ggplot(exampleData, aes(x = height, y = mass)) +
+  filter(mass < 1000)
+plotExample <- ggplot(exampleData, aes(x = height, y = mass)) +
   geom_point() +
   scale_x_continuous()
 ```
 
 Using Hex Codes from the dataset `goghColors`, three colors were added on top of a `ggplot` sample scatter plot. Based on the plot, the function automatically calculated three equal widths of the rectangles, and stretched them to upper and lower bounds on the y-axis. 
 
-```{r, warning=FALSE}
+```{r ex1, warning=FALSE}
 RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 ```
 
 #### Continuous `scale_color_gogh` example using the `cafeTerrace` color palette:
 
-```{r, warning=FALSE, message=FALSE}
- ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
-   geom_point(size = 3) +
-   scale_color_gogh(palette = "cafeTerrace", discrete = FALSE, reverse=TRUE) +
-   theme_minimal()
+```{r ex2, warning=FALSE, message=FALSE}
+ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
+  geom_point(size = 3) +
+  scale_color_gogh(palette = "cafeTerrace", discrete = FALSE, reverse = TRUE) +
+  theme_minimal()
 ```
 
 #### Discrete `scale_fill_gogh` example using the `almondBlossoms` color palette:
 
-```{r, warning=FALSE, message=FALSE}
+```{r ex3, warning=FALSE, message=FALSE}
 ggplot(storms, aes(x = category, fill = status)) +
   geom_bar() +
-  scale_fill_gogh(palette = "almondBlossoms", discrete = TRUE, reverse=FALSE) +
+  scale_fill_gogh(palette = "almondBlossoms", discrete = TRUE, reverse = FALSE) +
   theme_minimal()
 ```
 
 This package also comes with `rgbToHex`, converting rgb colors into hex code colors.
 
 ```{r}
-rgbToHex(c("(225, 104, 39)","(60, 90, 202)"))
+rgbToHex(c("(225, 104, 39)", "(60, 90, 202)"))
 ```
 
 
@@ -90,8 +90,8 @@ rgbToHex(c("(225, 104, 39)","(60, 90, 202)"))
 Get the development version from GitHub:
 
 ```{r, message=FALSE, eval=FALSE}
-#Install remotes if needed:
-#install.packages("remotes")
+# Install remotes if needed:
+# install.packages("remotes")
 remotes::install_github("katelyndiaz/ggRtsy")
 ```
 
