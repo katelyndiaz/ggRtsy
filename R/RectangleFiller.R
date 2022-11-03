@@ -10,6 +10,7 @@
 #'
 #' @export
 #'
+#' @import dplyr
 #' @importFrom magrittr %>%
 
 RectangleFiller <- function(plot1,
