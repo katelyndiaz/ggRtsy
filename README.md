@@ -9,6 +9,9 @@
 [![R](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ggRtsy)](https://CRAN.R-project.org/package=ggRtsy)
+
 <!-- badges: end -->
 
 ### Overview
@@ -26,19 +29,18 @@ It also has a function that work alongside `ggplot2()` to create more
 interesting data visualizations and add contextual information to the
 user’s plots.
 
--   `RectangleFiller()` - divides data visualizations into a specified
-    number of colored quadrants based on the number of input colors,
-    improving the readability of graphs.
+- `RectangleFiller()` - divides data visualizations into a specified
+  number of colored quadrants based on the number of input colors,
+  improving the readability of graphs.
 
--   `scale_color_gogh()` - used to color the point/lines of your ggplot
+- `scale_color_gogh()` - used to color the point/lines of your ggplot
 
--   `scale_fill_gogh()` - used to fill the inner color/bars of your
-    ggplot
+- `scale_fill_gogh()` - used to fill the inner color/bars of your ggplot
 
--   `rgbToHeX()` - used to convert rgb color codes to hex color codes
+- `rgbToHeX()` - used to convert rgb color codes to hex color codes
 
--   `gogh_interpolate()` - interpolates between the colors in
-    `gogh_palettes_pop`
+- `gogh_interpolate()` - interpolates between the colors in
+  `gogh_palettes_pop`
 
 ### Usage example
 
@@ -158,4 +160,4 @@ width="400" />
 
 ### See also
 
--   [tayloRswift package](https://github.com/asteves/tayloRswift)
+- [tayloRswift package](https://github.com/asteves/tayloRswift)
