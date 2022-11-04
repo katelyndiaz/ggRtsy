@@ -5,27 +5,26 @@ Version: 0.1.0
 Authors@R: c(
   person("Katelyn", "Diaz", email = "katndiaz@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6108-1682")),
   person("Silas", "Weden", email = "sweden@smith.edu", role = "aut"),
-  person("Tess", "Goldmann", email = "tgoldmann@smith.edu", role = "aut")
+  person("Tess", "Goldmann", email = "tgoldmann@smith.edu", role = "aut"),
+  person("Aushanae", "Haller", email = "aushanaenhaller@gmail.com", role = "edt", comment = c(ORCID = "0000-0002-2090-1952"))
     )
 Maintainer: Katelyn Diaz <katndiaz@gmail.com>
-Description: The `ggRtsy` package works with `ggplot2()` to add a Van Gogh color palette to the user’s repertoire.
+Description: Works with `ggplot2()` to add a Van Gogh color palette to the user’s repertoire.
  It also has a function that work alongside `ggplot2()` to create more interesting data visualizations and add contextual information to the user’s plots.
 License: CC0
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 2.10)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Imports:
   purrr,
   stringr,
-  dplyr,
-  tidyverse,
   ggplot2,
-  forcats,
   tibble,
   magrittr,
   grDevices,
+  dplyr
 Suggests: 
     knitr,
     testthat (>= 3.0.0)
