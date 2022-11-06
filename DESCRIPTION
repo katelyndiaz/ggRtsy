@@ -1,6 +1,6 @@
 Package: ggRtsy
 Type: Package
-Title: Add Some Van Gogh Colors and Overlay Colors On Your `ggplot()`
+Title: Add Some Van Gogh Colors and Overlay Colors on Your `ggplot()`
 Version: 0.1.0
 Authors@R: c(
   person("Katelyn", "Diaz", email = "katndiaz@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6108-1682")),
