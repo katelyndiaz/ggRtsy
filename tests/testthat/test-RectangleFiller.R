@@ -1,3 +1,4 @@
+library(ggplot2)
 plotOne <- ggplot(dplyr::starwars, aes(x = mass, y = height)) +
   geom_point() +
   scale_x_continuous()
