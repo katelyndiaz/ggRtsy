@@ -24,7 +24,8 @@ Imports:
   tibble,
   magrittr,
   grDevices,
-  dplyr
+  dplyr,
+  rmarkdown
 Suggests: 
     knitr,
     testthat (>= 3.0.0)
