@@ -7,8 +7,6 @@
 
 [![R-CMD-check](https://github.com/katelyndiaz/ggRtsy/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/R-CMD-check.yaml)
 [![R](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml)
-[![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ggRtsy)](https://CRAN.R-project.org/package=ggRtsy)
 
