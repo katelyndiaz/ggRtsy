@@ -23,21 +23,21 @@ list.
 
 #### Functions within the package:
 
-It also has a function that work alongside `ggplot2()` to create more
+It also has a function that work alongside ggplot to create more
 interesting data visualizations and add contextual information to the
 user’s plots.
 
-- `RectangleFiller()` - divides data visualizations into a specified
+- ‘RectangleFiller()’ - divides data visualizations into a specified
   number of colored quadrants based on the number of input colors,
   improving the readability of graphs.
 
-- `scale_color_gogh()` - used to color the point/lines of your ggplot
+- ‘scale_color_gogh()’ - used to color the point/lines of your ggplot
 
-- `scale_fill_gogh()` - used to fill the inner color/bars of your ggplot
+- ‘scale_fill_gogh()’ - used to fill the inner color/bars of your ggplot
 
-- `rgbToHeX()` - used to convert rgb color codes to hex color codes
+- ‘rgbToHeX()’ - used to convert rgb color codes to hex color codes
 
-- `gogh_interpolate()` - interpolates between the colors in
+- ‘gogh_interpolate()’ - interpolates between the colors in
   `gogh_palettes_pop`
 
 ### Usage example
