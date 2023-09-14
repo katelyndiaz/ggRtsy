@@ -10,8 +10,8 @@ Authors@R: c(
   person("Kathleen", "Hablutzel", email = "krhablutzel@gmail.com", role = "edt", comment = c(ORCID = "0000-0002-7802-6353"))
     )
 Maintainer: Katelyn Diaz <katndiaz@gmail.com>
-Description: Works with 'ggplot2()' to add a Van Gogh color palette to the user’s repertoire.
- It also has a function that work alongside 'ggplot2()' to create more interesting data visualizations and add contextual information to the user’s plots.
+Description: Works with 'ggplot2' to add a Van Gogh color palette to the user’s repertoire.
+ It also has a function that work alongside 'ggplot2' to create more interesting data visualizations and add contextual information to the user’s plots.
 License: CC0
 Encoding: UTF-8
 LazyData: true
