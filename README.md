@@ -14,7 +14,7 @@ status](https://www.r-pkg.org/badges/version/ggRtsy)](https://CRAN.R-project.org
 
 ### Overview
 
-The **ggRtsy** package works with **ggplot2** to add an additional color
+The ‘ggRtsy’ package works with ‘ggplot2’ to add an additional color
 palette to the user’s repertoire. This is the `goghColors` dataset,
 which contains the RGB and hex codes of colors picked from Van Gogh
 paintings. It has been broken down into an easy-to-use color palette
@@ -27,23 +27,23 @@ It also has a function that work alongside ggplot to create more
 interesting data visualizations and add contextual information to the
 user’s plots.
 
-- ‘RectangleFiller()’ - divides data visualizations into a specified
+- RectangleFiller() - divides data visualizations into a specified
   number of colored quadrants based on the number of input colors,
   improving the readability of graphs.
 
-- ‘scale_color_gogh()’ - used to color the point/lines of your ggplot
+- scale_color_gogh() - used to color the point/lines of your ggplot
 
-- ‘scale_fill_gogh()’ - used to fill the inner color/bars of your ggplot
+- scale_fill_gogh() - used to fill the inner color/bars of your ggplot
 
-- ‘rgbToHeX()’ - used to convert rgb color codes to hex color codes
+- rgbToHeX() - used to convert rgb color codes to hex color codes
 
-- ‘gogh_interpolate()’ - interpolates between the colors in
+- gogh_interpolate() - interpolates between the colors in
   `gogh_palettes_pop`
 
 ### Usage example
 
 Using Hex Codes from the dataset `goghColors`, three colors were added
-on top of a `ggplot` sample scatter plot. Based on the plot, the
+on top of a ggplot() sample scatter plot. Based on the plot, the
 function automatically calculated three equal widths of the rectangles,
 and stretched them to upper and lower bounds on the y-axis.
 
@@ -53,7 +53,7 @@ RectangleFiller(plotExample, c("#e32636", "#9966cc", "#f4c2c2"))
 
 ![](README_files/figure-gfm/ex1-1.png)<!-- -->
 
-#### Continuous `scale_color_gogh` example using the `cafeTerrace` color palette:
+#### Continuous scale_color_gogh() example using the `cafeTerrace` color palette:
 
 ``` r
 ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
@@ -64,7 +64,7 @@ ggplot(exampleData, aes(x = height, y = mass, color = birth_year)) +
 
 ![](README_files/figure-gfm/ex2-1.png)<!-- -->
 
-#### Discrete `scale_fill_gogh` example using the `almondBlossoms` color palette:
+#### Discrete scale_fill_gogh() example using the `almondBlossoms` color palette:
 
 ``` r
 ggplot(storms, aes(x = category, fill = status)) +
@@ -75,7 +75,7 @@ ggplot(storms, aes(x = category, fill = status)) +
 
 ![](README_files/figure-gfm/ex3-1.png)<!-- -->
 
-This package also comes with `rgbToHex`, converting rgb colors into hex
+This package also comes with rgbToHex(), converting rgb colors into hex
 code colors.
 
 ``` r
