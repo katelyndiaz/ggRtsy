@@ -9,9 +9,13 @@ gogh_interpolate(palette = "starryNight", reverse = FALSE, ...)
 \arguments{
 \item{palette}{the ggRtsy painting color palette of choice}
 
-\item{reverse}{Boolean, will be TRUE if user wants the palette reversed}
+\item{reverse}{Boolean, will be TRUE if the user wants the palette reversed}
 
 \item{...}{further arguments passed to [ggRtsy::gogh_interpolate()]}
+}
+\value{
+A color interpolation function.
+  If `reverse` is TRUE, it returns a reversed color interpolation function.
 }
 \description{
 Interpolate the color palette
