@@ -11,13 +11,13 @@ scale_fill_gogh(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...)
 
 \item{discrete}{Boolean if color aesthetic is discrete}
 
-\item{reverse}{Boolean if palette should be reversed}
+\item{reverse}{Boolean if the palette should be reversed}
 
 \item{...}{Additional arguments used to discrete_scale() or scale_fill_gradientn()
-to automatically interpolate between colours.}
+to automatically interpolate between colors.}
 }
 \value{
-No return value. Called for side effects
+No return value. Called for side effects.
 }
 \description{
 Creating the color fill scale for Van Gogh Colors
