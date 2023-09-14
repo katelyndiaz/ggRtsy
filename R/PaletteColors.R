@@ -33,6 +33,11 @@ gogh_interpolate <- function(palette = "starryNight", reverse = FALSE, ...) {
 #' @param reverse Boolean, will be TRUE if the user wants the palette reversed
 #' @param discrete Boolean if color aesthetic is discrete
 #' @param ... further arguments passed to [ggRtsy::scale_color_gogh()]
+#' @examples
+#' if (require(ggplot2)) {
+#'   data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+#'   ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()
+#' }
 #' @export
 #' @return A ggplot2 color scale.
 #'   If `discrete` is TRUE, it returns a discrete color scale; otherwise, a continuous color scale.
@@ -43,7 +48,7 @@ scale_color_gogh <- function(palette = "starryNight",
   if (discrete == TRUE) {
     ggplot2::discrete_scale("colour", paste0("gogh_", palette), palette = pal, ...)
   } else {
-    ggplot2::scale_colour_gradientn(colours = pal(256), ...)
+    ggplot2::scale_colour_gradientn(colours = pal(256), ...) # gradient is the default for continuous
   }
 }
 
@@ -53,6 +58,11 @@ scale_color_gogh <- function(palette = "starryNight",
 #' @param reverse Boolean if the palette should be reversed
 #' @param ... Additional arguments used to discrete_scale() or scale_fill_gradientn()
 #'   to automatically interpolate between colors.
+#' @examples
+#' if (require(ggplot2)) {
+#'   data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
+#'   ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
+#' }
 #' @export
 #' @return No return value. Called for side effects.
 scale_fill_gogh <- function(palette = "sunflowers", discrete = TRUE, reverse = FALSE, ...) {
@@ -64,14 +74,3 @@ scale_fill_gogh <- function(palette = "sunflowers", discrete = TRUE, reverse = F
   }
 }
 
-#' @examples
-#' if (require(ggplot2)) {
-#'   data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
-#'   ggplot(data, aes(x,y,color = c))+geom_point()+scale_color_gogh()
-#' }
-
-#' @examples
-#' if (require(ggplot2)) {
-#'   data <- data.frame(c = LETTERS[1:3],x = c(1,5,7),y = c(5,9,13))
-#'   ggplot(data, aes(x,fill=c))+geom_bar()+scale_fill_gogh()
-#' }
