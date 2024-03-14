@@ -7,7 +7,8 @@
 
 [![R-CMD-check](https://github.com/katelyndiaz/ggRtsy/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/R-CMD-check.yaml)
 [![R](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml/badge.svg)](https://github.com/katelyndiaz/ggRtsy/actions/workflows/r.yml)
-[![CRAN
+\[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/ggRtsy) [![CRAN
 status](https://www.r-pkg.org/badges/version/ggRtsy)](https://CRAN.R-project.org/package=ggRtsy)
 
 <!-- badges: end -->
