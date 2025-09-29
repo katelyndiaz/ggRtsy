@@ -15,10 +15,15 @@
 
 RectangleFiller <- function(plot1,
                             hex_codes = c("red", "blue", "green", "orange", "purple")) {
-  rect_height <- fill <- NULL
+  rect_height <- fill <- NULL #assigns NULL to fill, then assigns that to rect_height
+  labs <- ggplot2::get_labs(plot1) # previous ggplot2 version: plot1$data[unlist(plot1$labels)]
 
-  data <- plot1$data[unlist(plot1$labels)] %>%
+  x_var <- labs$x
+  y_var <- labs$y
+
+  data <- plot1$data[c(x_var, y_var)] %>%
     purrr::map_dfr(range, na.rm = TRUE)
+
   x_min <- data[[1, 1]]
   x_max <- data[[2, 1]]
   width <- (x_max - x_min) / length(hex_codes)
@@ -29,9 +34,13 @@ RectangleFiller <- function(plot1,
     rect_height = Inf,
     fill = letters[1:length(hex_codes)]
   )
-  names(coords)[1:2] <- unlist(plot1$labels[1:2])
+  names(coords)[1:2] <- c(x_var, y_var)
 
   plot1 +
-    ggplot2::geom_tile(data = coords, ggplot2::aes(height = rect_height, fill = fill), alpha = .2) +
+    ggplot2::geom_tile(
+      data = coords,
+      ggplot2::aes(height = rect_height, fill = fill),
+      alpha = .2
+    ) +
     ggplot2::scale_fill_manual(values = hex_codes, guide = FALSE)
 }
